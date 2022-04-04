@@ -36,10 +36,17 @@ Please refer to [izuna385's repository](https://github.com/izuna385/Entity-Linki
 * [Highly Parallel Autoregressive Entity Linking with Discriminative Correction](https://arxiv.org/abs/2109.03792)
     - Encodes the text with Longformer, then predicts the mention spans with FNN, and generates corresponding entity with a simple LSTM. A correction step with MLP is followed afterwards to ensure the chosen entity has the highest probablity.
     - Simple structure after the encoder, enabling parallel linking. Also a combination of autoregressive EL and multi-choice EL.
-
 * [Low-Rank Subspaces for Unsupervised Entity Linking](https://arxiv.org/abs/2104.08737)
     - Decomposites the embedding of context(by Word2Vec) and embedding(by DeepWalk) into low-dimension vectors, then combines similarity ranking-based weights to score the candidates.
     - Rare work about unsupervised entity linking(without annotated mention-entity pairs)
+* [BERT might be Overkill: A Tiny but Effective Biomedical Entity Linker based on Residual Convolutional Neural Networks](https://arxiv.org/pdf/2109.02237.pdf)
+    * Replaces the large BERT-based encoder with an efficient  Residual Convolutional Neural Network for biomedical entity linking in order to capture the local information. 
+    * Two probing experiments show that the input word order and the attention scope of transformers in BERT are not so important for the performance, which means that the local information may be more important.
+
+* [Named Entity Recognition for Entity Linking: What Works and What’s Next](https://aclanthology.org/2021.findings-emnlp.220.pdf)
+    * Enhances a strong EL baseline with i) NER-enriched entity representations, ii) NER-enhanced candidate selection, iii) NER-based negative sampling, and iv) NER-constrained decoding.
+    * NER helps EL baseline to exceed GENRE when trained on  a small amount of instances.
+
 
 ###  1.4. <a name='ACL21'></a>ACL'21
 * [MOLEMAN: Mention-Only Linking of Entities with a Mention Annotation Network](https://arxiv.org/abs/2106.07352)
